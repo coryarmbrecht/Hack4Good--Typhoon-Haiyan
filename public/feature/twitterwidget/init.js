@@ -5,5 +5,4 @@ app.config( function( $routeProvider ) {
       controller: 'TwitterIndexController',
       templateUrl: '/feature/twitterwidget/index.html'
     })
-    .otherwise({ redirectTo: '/twitter' });
 });

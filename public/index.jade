@@ -24,6 +24,7 @@ html(data-ng-app="hack4good")
     
     // Stylesheets 
     link(rel="stylesheet", href="/style/layout.css")
+    link(rel="stylesheet", href="/style/carousel.css")
     
     // Angular JS App 
     script(src="/app.js")
@@ -36,6 +37,10 @@ html(data-ng-app="hack4good")
     script(src="/feature/example/init.js")
     link(rel="stylesheet", href="/feature/example/example.css")
 
+    // Home 
+    script(src="/feature/home/IndexController.js")
+    script(src="/feature/home/init.js")
+
     // Twitter 
     script(src="/feature/twitterwidget/IndexController.js")
     script(src="/feature/twitterwidget/init.js")
@@ -45,5 +50,15 @@ html(data-ng-app="hack4good")
   // Pass View & Session Variables from Server Side to Angular
   body(ng-init="flash=#{JSON.stringify(flash)}; user=#{JSON.stringify(user)};")
 
-    // Main Content Section 
-    #main(data-ng-view="")
+    .container
+      .header
+        ul.nav.nav-pills.pull-right
+          li.active
+            a(href="#/") Home
+          li
+            a(href="#/twitter") Twitter
+
+        h3.text-muted relief.io
+
+      // Main Content Section 
+      #main(data-ng-view="")
