@@ -5,7 +5,6 @@ app.config( function( $routeProvider ) {
       controller: 'ExampleIndexController',
       templateUrl: '/feature/example/index.html'
     })
-    .otherwise({ redirectTo: '/example' });
 });
 
 app.factory( 'ExampleService', function() {
